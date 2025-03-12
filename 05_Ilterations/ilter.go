@@ -11,6 +11,10 @@ func main(){
 
 	//ilterating over arrays
 	arr := []int{10,20,30,40,50}
+	/*
+	In Golang Range keyword is used in different kinds of data structures in order to iterates over elements. 
+	The range keyword is mainly used in for loops in order to iterate over all the elements of a map, slice, channel, or an array. 
+	*/
 	for ind,val := range arr {
 		fmt.Println("ind=",ind," val=",val)
 	}

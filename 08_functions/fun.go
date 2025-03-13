@@ -46,6 +46,13 @@ func deferfunc(){
 	fmt.Println("y=",y)
 }
 
+func factorial(n int)int{
+	//recursive function
+	if n==0{ //base condition
+		return 1
+	}
+	return n * factorial(n-1) //recursive call
+}
 
 func main(){
 	fmt.Println("functions.")
@@ -103,4 +110,20 @@ func main(){
 	defer fmt.Println("stmt 1:",1)
 	defer fmt.Println("stmt 2:",2)
 	defer fmt.Println("stmt 3:",3)
+
+	//recursive function:
+	/*
+	A recursive function is a function that calls itself to solve a problem. 
+	It breaks the problem into smaller subproblems until a base condition is met.
+	*/
+	/*
+	syntax:
+	func fun_name(para type)return-type{
+		if baseCondition{
+			return result
+		}
+		return fun_name(modified parameter)//recursive function call
+	}
+	*/
+	fmt.Println("factorial eg:",factorial(5))
 }

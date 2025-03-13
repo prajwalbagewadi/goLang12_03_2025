@@ -21,7 +21,10 @@ Println(): This method is present in fmt package and it is used to display â€œ!â
 
 */
 func main(){
+    var a,b int = 5,7
 	fmt.Println("Hello World.")
+    fmt.Printf("formatted str output:%d",a)
+    fmt.Print("print without newline:",b)
 }
 
 

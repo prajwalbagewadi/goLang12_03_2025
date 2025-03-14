@@ -1,4 +1,4 @@
-// arrays
+// arrays in go
 package main
 
 import (

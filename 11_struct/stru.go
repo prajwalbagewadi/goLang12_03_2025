@@ -14,6 +14,16 @@ type Person struct{
 	age int
 }
 
+func updateAge1(p Person){
+	//pass by value (struct as a para)
+	p.age=30
+}
+
+func updateAge2(p *Person){
+	//pass by Reference (struct as a para)
+	p.age=30
+}
+
 func main(){
 	var e1 = Employee{ename:"prajwal",desg:"SDE1"}
 	fmt.Println("E1=",e1)
@@ -35,4 +45,11 @@ func main(){
 	fmt.Scan(&p2.name)
 	fmt.Scan(&p2.age)
 	fmt.Println(" name:",p2.name," age:",p2.age)
+
+	// Passing a Structure as para
+	p3 := Person{"alice",25}
+	updateAge1(p3)
+	fmt.Println("call by val p3=",p3)
+	updateAge2(&p3)
+	fmt.Println("call by ref p3=",p3)
 }

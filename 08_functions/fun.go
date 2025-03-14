@@ -54,6 +54,20 @@ func factorial(n int)int{
 	return n * factorial(n-1) //recursive call
 }
 
+func funAsParam(x int,y int,oper func(a int,b int)int)int{
+	//passing function as a parameter
+	//function that takes another function as a parameter
+	return oper(x,y) // call the passed function
+}
+
+func paramAdd(x int,y int)int{
+	return x+y
+}
+
+func paramMulti(x int,y int)int{
+	return x*y
+}
+
 func main(){
 	fmt.Println("functions.")
 	fmt.Println("keyword: func used.")
@@ -126,4 +140,14 @@ func main(){
 	}
 	*/
 	fmt.Println("factorial eg:",factorial(5))
+
+	//functions as parameters
+    /*
+	syntax
+		func fun_name(para1 type,para2 type,function func(type,type)return_type)return_type{
+			return function(param1,param2)
+		}
+	*/
+	result=funAsParam(5,5,paramAdd)//function call
+	fmt.Println("result of function as para=",result)
 }

@@ -29,4 +29,21 @@ func main(){
 	fmt.Println("orginal slice=",slice4)
 	modSlice(slice4)
 	fmt.Println("modified slice=",slice4)
+
+
+	//multidimensional slice 
+	m1s := [][]int {
+		{1,2,3},
+		{4,5,6},
+	}
+	fmt.Println("m1s=",m1s)
+
+	//dynamic
+	rows :=3 
+	cols :=3
+	m2s := make([][]int,rows)
+	for i:=0;i<rows;i++{
+		m2s[i]=make([]int,cols)
+	}
+	fmt.Println("m2s=",m2s)
 }

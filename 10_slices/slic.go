@@ -8,8 +8,9 @@ func modSlice(s []int){
 }
 
 func main(){
+	//Slicing an Array or Another Slice
 	arr := [8]int{1,2,3,4,4,3,2,1}
-	slice := arr[1:4] //slice from array
+	slice := arr[1:4] //slice from array // Slicing elements from index 1 to 3 (excludes 4)
 	fmt.Println("slice from arr=",slice)
 
 	var slice1 []int

@@ -149,5 +149,7 @@ func main(){
 		}
 	*/
 	result=funAsParam(5,5,paramAdd)//function call
-	fmt.Println("result of function as para=",result)
+	fmt.Println("result of function as para1=",result)
+	result=funAsParam(5,5,paramMulti)//function call
+	fmt.Println("result of function as para2=",result)
 }

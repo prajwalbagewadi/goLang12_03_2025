@@ -63,6 +63,30 @@ func (p Person) Speak() string {
 	return "hello im "+p.Name
 }
 
+//method sets
+//interface 
+type Speaker2 interface{
+	Speak1()
+	changeName(string) //ptr receiver
+}
+
+type Speaker1 interface{
+	Speak1() //val receiver
+}
+//struct Person1
+type Person1 struct {
+	Name string
+}
+//method with value receiver
+func (p Person1) Speak1() {
+	//p.Name="Pointer"
+	fmt.Println("\n method set val receiver hello i am ",p.Name)
+}
+//method with Ptr receiver 
+func (p *Person1) changeName(newName string){
+	p.Name=newName
+}
+
 func main(){
 	fmt.Println("methods.")
 	var e1 = Emp{1,"abc","sde1",50000.00}
@@ -108,4 +132,24 @@ func main(){
 
 	fmt.Printf("Dynamic Type:%T\n",s)//prints concrete type
 	fmt.Printf("Dynamic value:",s.Speak())//func call
+
+
+	//method sets with interfaces
+	//val receiver 
+	var s1 Speaker1 //interface
+	p := Person1{"Alice"}
+	s1 = p
+	s1.Speak1()
+	 
+	pp := Person1{"Bob"}
+	s1 = &pp //value Receiver with &address 
+	s1.Speak1()
+  
+	var s2 Speaker2
+	p2 := Person1{"mia"}
+	s2 = &p2
+	s2.Speak1()
+	s2.changeName("ptr")
+	s2.Speak1()
+
 }

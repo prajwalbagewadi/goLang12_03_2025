@@ -1,0 +1,20 @@
+<Library>
+    <Book>
+        <BookID>100</BookID>
+        <Title>TWISTED GAMES</Title>
+        <Author>Ana Huang</Author>
+        <Publisher>Wisdom book</Publisher>
+        <Year>2024</Year>
+        <Price>299</Price>
+        <ISBN-10>034943431X</ISBN-10>
+    </Book>
+    <Book>
+        <BookID>101</BookID>
+        <Title>It Ends With Us</Title>
+        <Author>Colleen Hoover</Author>
+        <Publisher>Atria Books</Publisher>
+        <Year>2016</Year>
+        <Price>326</Price>
+        <ISBN-10>9781501110368</ISBN-10>
+    </Book>
+</Library>
